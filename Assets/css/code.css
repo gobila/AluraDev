@@ -1,0 +1,91 @@
+.code {
+  width: 60%;
+}
+.code__container {
+  width: 100%;
+  display: flex;
+  background-color: #6BD1FF;
+  border-radius: 20px;
+  padding: 2% 0%;
+}
+.code__windows {
+  background-color: black;
+  border-radius: 20px;
+  min-width: 90%;
+  width: 95%;
+  min-height: 500px;
+  margin: auto;
+  box-sizing: border-box;
+  padding: 20px;
+}
+.code__windows .dots {
+  display: flex;
+  margin-bottom: 10px;
+}
+.code__windows .dots .dot-danger {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 10px;
+  background-color: #FF5F56;
+}
+.code__windows .dots .dot-atetion {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 10px;
+  background-color: #FFBD2E;
+}
+.code__windows .dots .dot-sucess {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 10px;
+  background-color: #27C93F;
+}
+.code #codeArea {
+  display: block;
+  width: 100%;
+  min-height: 400px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #FFF;
+  font-size: 14px;
+  border: none;
+}
+.code__btn {
+  width: 100%;
+  height: 56px;
+  color: #FFF;
+  font-size: 24px;
+  line-height: 16px;
+  margin-top: 20px;
+  background: rgba(80, 129, 251, 0.08);
+  border: 0px;
+  border-radius: 8px;
+}
+.code__btn:hover {
+  background-color: #7BA4FC;
+}
+
+.noMargin {
+  display: flex;
+  height: 0px;
+  width: auto;
+  margin: 0px;
+  top: 0px;
+  padding: 0px;
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .code {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+/*# sourceMappingURL=code.css.map */

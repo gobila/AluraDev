@@ -1,0 +1,95 @@
+@import './Variaveis.scss';
+
+@mixin dot {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 10px;
+}
+$blue:#6B83FF;
+$yellow:#FFC46B;
+$pink:#FF6BCD;
+$green:#9AFF6B;
+
+.code{
+    width: 60%;
+
+    &__container{
+        width: 100%;
+        display: flex;
+        background-color: $codeContainer;
+        border-radius: 20px;
+        padding: 2% 0%;
+    }
+    &__windows{
+        background-color: black;
+        border-radius: 20px;
+        min-width: 90%;
+        width: 95%;
+        min-height: 500px;
+        margin: auto ;
+        box-sizing: border-box;
+        padding: 20px;
+        
+        .dots{
+            display: flex;
+            margin-bottom: 10px ;
+            .dot-danger {
+                @include dot();
+                background-color: $danger;
+            }
+            .dot-atetion {
+                @include dot();
+                background-color: $atetion;
+            }
+            .dot-sucess {
+                @include dot();
+                background-color: $sucess;
+            }
+        }
+    }
+    #codeArea{
+        display: block;
+        width: 100%;
+        min-height: 400px;
+        box-sizing:border-box;
+        background-color: rgba(255,255,255, 0.05);
+        color: $textColor;
+        font-size: 14px;
+        border:none
+    }
+     &__btn{
+        width: 100%;
+        height: 56px;
+        color:$textColor;
+        font-size:$bodySize;
+        line-height: $bodyLine;
+        margin-top: 20px;
+        background: rgba(80, 129, 251, 0.08);
+        border:0px;
+        border-radius: 8px;
+        
+        &:hover{
+            background-color: $ligthblue;
+        }
+     }
+
+     
+}
+.noMargin{
+    display: flex;
+    height: 0px;
+    width: auto;
+    margin: 0px;
+    top:0px;
+    padding: 0px;
+    position: relative;
+}
+
+@media screen and (max-width: 768px) {
+    .code{
+        width: 90%;
+        margin:auto
+    }
+}

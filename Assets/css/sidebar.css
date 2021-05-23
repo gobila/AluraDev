@@ -1,0 +1,137 @@
+.sidebar {
+  width: 20%;
+}
+.sidebar__container {
+  display: flex;
+  flex-direction: column;
+}
+.sidebar__description {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px;
+}
+.sidebar__description_input {
+  width: calc(100% - 4%);
+  line-height: 24px;
+  height: 52px;
+  margin: 10px 0px;
+  color: #FFF;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.16);
+  border: 0px;
+  border-radius: 10px;
+  padding: 0 2%;
+}
+.sidebar__description #descript {
+  height: 80px;
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+}
+.sidebar__custom {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px;
+}
+.sidebar__custom_changes {
+  width: calc(100% - 4%);
+  line-height: 24px;
+  height: 52px;
+  margin: 10px 0px;
+  color: #FFF;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.16);
+  border: 0px;
+  border-radius: 10px;
+  padding: 0 2%;
+}
+.sidebar__custom .sidebar__options {
+  width: 100%;
+}
+.sidebar__custom .sidebar__options_item {
+  font-size: 18px;
+  line-height: 24px;
+  background-color: rgba(5, 30, 61, 0.8);
+  border-radius: 10px;
+}
+.sidebar__btn {
+  background-color: #5081FB;
+  margin: 10px 30px;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 10px;
+  border: 0px;
+  height: 56px;
+  color: #FFF;
+}
+.sidebar__btn:hover {
+  background-color: #96B9FD;
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    margin: auto;
+  }
+  .sidebar__container {
+    margin-top: 15px;
+    width: 100%;
+  }
+  .sidebar__description {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 30px;
+  }
+  .sidebar__description_input {
+    width: calc(100% - 4%);
+    line-height: 24px;
+    height: 52px;
+    margin: 10px 0px;
+    color: #FFF;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.16);
+    border: 0px;
+    border-radius: 10px;
+    padding: 0 2%;
+  }
+  .sidebar__description #descript {
+    height: 80px;
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+  }
+  .sidebar__custom_filds {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .sidebar__custom .sidebar__options {
+    width: 45%;
+  }
+  .sidebar__custom input {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .sidebar__custom_filds {
+    flex-direction: column;
+    justify-content: normal;
+  }
+  .sidebar__custom .sidebar__options {
+    width: 100%;
+  }
+  .sidebar__custom input {
+    width: calc(100% - 4%);
+    line-height: 24px;
+    height: 52px;
+    margin: 10px 0px;
+    color: #FFF;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.16);
+    border: 0px;
+    border-radius: 10px;
+    padding: 0 2%;
+  }
+}
+
+/*# sourceMappingURL=sidebar.css.map */

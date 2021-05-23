@@ -1,0 +1,67 @@
+@import './Variaveis.scss';
+.projects{
+    display: flex;
+    max-width: 80%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin:20px;
+}
+.project{
+    &__card{
+        width:49%;
+        background: $backgroundColorDark;
+        margin-bottom: 30px;
+        color:$textColor;
+        &_img{
+            width: 100%;
+            img{
+                width: 100%;
+            };
+        };
+        &_title{
+            font-size: $bodySize;
+            font-weight: 700;
+            line-height: $titleSize;
+            margin:20px;
+        }
+        &_description{
+            margin:20px;
+            font-size: $sidebarSize;
+            line-height: $sidebarLine;
+            opacity: 0.8;
+        }
+        &_footer{
+            display: none;
+        }
+    };
+}
+
+
+@media screen and (max-width:768px) {
+    .projects{
+        width: 90%;
+        margin: auto;
+    }
+    .project{
+        &__card{
+            width:100%;
+            
+            &_footer{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 10px;
+                
+                &-engagement{
+                    display: inherit;
+                    p{
+                        margin: 5px;
+                    }
+                }
+                &-user{
+                    display: inherit;
+                    margin-right:10px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+@import './Variaveis.scss';
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+body{
+    background-color: $darkblue;
+    font-family: 'Inter', sans-serif;
+}
+.main{
+    display: flex;
+    width: 100%;
+}
+.title{
+    color:$textColor;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.4em;
+    margin-bottom: 5%;
+}
+
+
+@media screen and (max-width: 768px) {
+    .main{
+        flex-direction: column;
+        width: 100%;
+    }
+}

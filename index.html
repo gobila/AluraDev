@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AluraDEV</title>
+
+    <link rel="stylesheet" href="Assets/css/reset.css">
+    <link rel="stylesheet" href="Assets/css/global.css">
+    <link rel="stylesheet" href="Assets/css/header.css">
+    <link rel="stylesheet" href="Assets/css/menu.css">
+    <link rel="stylesheet" href="Assets/css/code.css">
+    <link rel="stylesheet" href="Assets/css/sidebar.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <script src="./Assets/js/screenshot/html2canvas.min.js"></script>
+    <script src="./Assets/js/screenshot/canvas2image.js"></script>
+<!-- <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">  -->
+</head>
+<body>
+
+    <header class="header">
+        <figure class="header__img">
+            <img class="header__logo" src="./Assets/img/logo.svg" alt="Logo AluraDev"/>
+        </figure>
+        <div class="header__search">
+            <input class="header__search_input" type="text" placeholder="Busque por algo"/>
+            <button class="header__search_btn">&#128270</button>
+            
+            <div class="header__search_menu">
+                <div class="header__search__menu_btn" id="#btn-dropdown"  onclick="dropdow()">&#9776</div>
+                <div class="menu__container-desactived" id="menu">
+                    <a class="menu__item active" href="./index.html">
+                        Editor de código</a>
+                    <a class="menu__item" href="./comunity.html">
+                        Comunidade</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="header__user">
+            <img class="header__user_img" src="./Assets/img/Photo.png" alt=""/>
+            <p class="header__user_name">Herry</p>
+        </div>
+        
+    </header>
+
+    <main class="main">
+
+        <section class="menu">
+            <div class="menu__container">
+                <h3 class="title">MENU</h3>
+                    
+                <nav class="menu__nav">
+                    <ul class="menu__list">
+                        <li class="active">
+                            <a class="menu__item" href="#">
+                                <img class="menu__item_img" src="Assets/img/icon_code.svg" alt="">
+                                Editor de código</img></a>
+                        </li>
+                        <li>
+                            <a class="menu__item" href="./comunity.html">
+                                <img class="menu__item_img" src="Assets/img/icon_comunity.svg" alt="">
+                                Comunidade</img></a>
+                        </li>
+                        
+                    </ul>
+                </nav>
+            </div>
+            
+        </section>
+
+        <section class="code">
+            <div class="code__container" id="photo" >
+                <div class="code__windows">
+                    <div class="dots">
+                        <div class="dot-danger"></div>
+                        <div class="dot-atetion"></div>
+                        <div class="dot-sucess"></div>
+                    </div>
+                    <!-- <textarea name="code" id="codeArea" placeholder="digite o codigo"></textarea> -->
+                    <div name="code" id="codeArea" placeholder="digite o codigo" contenteditable="true"></div>
+                </div>
+            </div>
+            <button type="button" class="code__btn" id="code__btn">
+                Visualizar com o highlight
+            </button>
+        </section>
+
+        <section class="sidebar">
+            <div class="sidebar__container">
+                <div class="sidebar__description">
+                    <h3 class="title">Seu Projeto</h3>
+                    <input class="sidebar__description_input" type="text" placeholder="Nome do seu projeto"/>
+                    <textarea class="sidebar__description_input" name="description" id="descript" placeholder="Descrição do seu projeto"></textarea>
+                </div>
+
+                <div class="sidebar__custom">
+                    <h3 class="title">Personalização</h3>
+                    <div class="sidebar__custom_filds">
+                        <select class="sidebar__custom_changes sidebar__options" name="language" id="language" class="">
+                            <option value="Javascript" class="sidebar__options_item">Javascript</option>
+                            <option value="HTML" class="sidebar__options_item">HTML</option>
+                            <option value="CSS" class="sidebar__options_item">CSS</option>
+                        </select>
+
+                        <input class="sidebar__custom_changes" type="text" placeholder="color">
+                    </div>
+                </div>
+                
+                <button class="sidebar__btn" id="download" onclick="takeshot()">
+                    Salvar projeto
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="output" class="noMargin"></div>
+
+</body>
+
+
+<script type="text/javascript">
+  
+//     // Define the function 
+//     // to screenshot the div
+//     function takeshot() {
+//         let div = document.getElementById('photo');
+
+//         // Use the html2canvas
+//         // function to take a screenshot
+//         // and append it
+//         // to the output div
+//         html2canvas(div).then(
+//             function (canvas) {
+//                 document
+//                 .getElementById('output')
+//                 .appendChild(canvas);
+//             })
+//     }
+// ///arrumando input de code
+//     $('#codeArea').focus();
+//     var selection = window.getSelection();
+//     var range = document.createRange();
+//     var div = $('.code__container').get(0);
+//     range.setStartBefore(div);
+//     range.collapse(true);
+//     selection.removeAllRanges(true);
+//     selection.addRange(range);
+//     // cursor should now be between div1 and div2
+//     range = window.getSelection().getRangeAt(0);
+//     console.log("range object returned is: ", range);
+    
+
+
+function takeshot(){
+    html2canvas(document.getElementById("photo"),{backgroundColor: "transparent", padding:"0px"}).then(canvas => {
+        // document.getElementById('output').appendChild(canvas)
+        return Canvas2Image.saveAsPNG(canvas);
+        console.log(canvas)
+    });
+}
+
+// document.getElementById("download").addEventListener("click", function() {
+    
+//     html2canvas(document.querySelector('#photo')).then(function(canvas) {
+
+//         saveAs(canvas.toDataURL('Assets/img'), 'file-name.png');
+//     });
+// });
+
+
+// function saveAs(uri, filename) {
+
+//     var link = document.createElement('a');
+
+//     if (typeof link.download === 'string') {
+
+//         link.href = uri;
+//         link.download = filename;
+
+//         //Firefox requires the link to be in the body
+//         document.body.appendChild(link);
+
+//         //simulate click
+//         link.click();
+
+//         //remove the link when done
+//         document.body.removeChild(link);
+
+//     } else {
+
+//         window.open(uri);
+
+//     }
+// }
+
+
+</script>
+</html>
+<script src="./Assets/js/menuCollapse.js"></script>"

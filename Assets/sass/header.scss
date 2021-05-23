@@ -1,0 +1,122 @@
+@import './Variaveis.scss';
+
+$headerFontSize:16px;
+$headerLine:24px;
+
+.header{
+    display: flex;
+    color: $textColor;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top:32px;
+    margin-bottom: 32px;
+
+    &__img{
+        width: 20%;
+        margin: 0px;
+    }
+    &__logo{
+        padding: 20px;
+    }
+    &__search{
+        width: 60%;
+        &_input{
+            width: calc(100% - 4%);
+            border-radius: 10px;
+            height: 54px;
+            line-height: $headerLine;
+            font-size: $headerFontSize;
+            font-weight: 400;
+            background-color: $backgroundColor;
+            border:0px;
+            color:$textColor;
+            padding: 0% 2%;
+        }
+        &_btn{
+            display: none;
+        }
+        &_menu{
+            display: none;
+        }
+    }
+    &__user{
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &_name{
+            margin-left: 5%;
+            line-height: $headerLine;
+            font-size: $headerFontSize;
+        }
+        &_img{
+            width: 32px;
+            height: 32px;
+        }
+    }
+    &__menu{
+        display: none;
+    }
+}
+@media screen and (max-width:768px) {
+    .header{
+        margin: 5% auto;
+        place-content: space-around;
+
+        &__img{
+            width: 20%;
+            margin: 0px;
+        }
+        &__logo{
+            width: 100%;
+            padding: 0px;
+        }
+        &__user{
+            display: none;
+        }
+
+        &__search{
+            width: 70%;
+            display: flex;
+            justify-content: space-between;
+            &_btn{
+                display: none;
+            }
+            &_input{
+                width: 70%;
+            }
+        }
+        &__search_menu{
+            justify-content: center;
+            display: flex;
+            text-align: column;
+            margin: auto;
+            width: 20%;
+        }
+    }
+}
+@media screen and (max-width:480px) {
+    .header{
+        &__img{
+            width: 40%;
+        }
+        &__search{
+            width: 60%;
+            justify-content: flex-end;
+            &_input{
+                display:none;
+            }
+            &_btn{
+                display: inline-block;
+                font-size: 24px;
+                width:50%;
+                background-color: transparent;
+                border:none;
+            }
+        }
+        &__search_menu{
+            width: 50%;
+        }
+    }
+}

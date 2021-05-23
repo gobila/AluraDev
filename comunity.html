@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="Assets/css/reset.css">
+    <link rel="stylesheet" href="Assets/css/global.css">
+    <link rel="stylesheet" href="Assets/css/header.css">
+    <link rel="stylesheet" href="Assets/css/menu.css">
+    <link rel="stylesheet" href="Assets/css/code.css">
+    <link rel="stylesheet" href="Assets/css/projects.css">
+
+
+
+</head>
+<body>
+    <header class="header">
+        <figure class="header__img">
+            <img class="header__logo" src="./Assets/img/logo.svg" alt="Logo AluraDev"/>
+        </figure>
+        <div class="header__search">
+            <input class="header__search_input" type="text" placeholder="Busque por algo"/>
+            <button class="header__search_btn">&#128270</button>
+            
+            <div class="header__search_menu">
+                <div class="header__search__menu_btn" id="#btn-dropdown"  onclick="dropdow()">&#9776</div>
+                <div class="menu__container-desactived" id="menu">
+                    <a class="menu__item active" href="./index.html">
+                        Editor de código</a>
+                    <a class="menu__item" href="./comunity.html">
+                        Comunidade</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="header__user">
+            <img class="header__user_img" src="./Assets/img/Photo.png" alt=""/>
+            <p class="header__user_name">Herry</p>
+        </div>
+        
+    </header>
+
+    <main class="main">
+        
+        <section class="menu">
+            <div class="menu__container">
+                <h3 class="title">MENU</h3>
+                    
+                <nav class="menu__nav">
+                    <ul class="menu__list">
+                        <li >
+                            <a class="menu__item " href="./index.html">
+                                <img class="menu__item_img" src="Assets/img/icon_code.svg" alt="">
+                                Editor de código</img></a>
+                        </li>
+                        <li class="active">
+                            <a class="menu__item" href="./comunity.html">
+                                <img class="menu__item_img" src="Assets/img/icon_comunity.svg" alt="">
+                                Comunidade</img></a>
+                        </li>
+                        
+                    </ul>
+                </nav>
+            </div>            
+        </section>
+
+        <section class="projects">
+            <div class="project__card">
+                <div class="project__card_img">
+                    <img src="./Assets/img/screeshots/blue.png" alt="">
+                </div>
+                <div class="project__card_title">
+                    <h2 class=""> PROJETO</h2>
+                </div>
+                <div class="project__card_description">
+                    <p class="description"> descrição do projeto</p>
+                </div>
+                <div class="project__card_footer">
+                    <div class="project__card_footer-engagement">
+                        <p>💬</p>
+                        <p>9</p>
+                        <p>❤</p>
+                        <p>9</p>
+                    </div>
+                    <div class="project__card_footer-user">
+                        <img class="header__user_img" src="./Assets/img/Photo.png" alt=""/>
+                        <p class="header__user_name">Herry</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project__card">
+                <div class="project__card_img">
+                    <img src="./Assets/img/screeshots/yellow.png" alt="">
+                </div>
+                <div class="project__card_title">
+                    <h2 class=""> PROJETO</h2>
+                </div>
+                <div class="project__card_description">
+                    <p class="description"> descrição do projeto</p>
+                </div>
+                <div class="project__card_footer">
+                    <div class="project__card_footer-engagement">
+                        <p>💬</p>
+                        <p>9</p>
+                        <p>❤</p>
+                        <p>9</p>
+                    </div>
+                    <div class="project__card_footer-user">
+                        <img class="header__user_img" src="./Assets/img/Photo.png" alt=""/>
+                        <p class="header__user_name">Herry</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project__card">
+                <div class="project__card_img">
+                    <img src="./Assets/img/screeshots/pink.png" alt="">
+                </div>
+                <div class="project__card_title">
+                    <h2 class=""> PROJETO</h2>
+                </div>
+                <div class="project__card_description">
+                    <p class="description"> descrição do projeto</p>
+                </div>
+                <div class="project__card_footer">
+                    <div class="project__card_footer-engagement">
+                        <p>💬</p>
+                        <p>9</p>
+                        <p>❤</p>
+                        <p>9</p>
+                    </div>
+                    <div class="project__card_footer-user">
+                        <img class="header__user_img" src="./Assets/img/Photo.png" alt=""/>
+                        <p class="header__user_name">Herry</p>
+                    </div>
+                </div>
+            </div>
+            <div class="project__card">
+                <div class="project__card_img">
+                    <img src="./Assets/img/screeshots/green.png" alt="">
+                </div>
+                <div class="project__card_title">
+                    <h2 class=""> PROJETO</h2>
+                </div>
+                <div class="project__card_description">
+                    <p class="description"> descrição do projeto</p>
+                </div>
+                <div class="project__card_footer">
+                    <div class="project__card_footer-engagement">
+                        <p>💬</p>
+                        <p>9</p>
+                        <p>❤</p>
+                        <p>9</p>
+                    </div>
+                    <div class="project__card_footer-user">
+                        <img class="header__user_img" src="./Assets/img/Photo.png" alt=""/>
+                        <p class="header__user_name">Herry</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+    
+</body>
+<script src="./Assets/js/menuCollapse.js"></script>
+</html>
