@@ -59,6 +59,13 @@ $green:#9AFF6B;
         font-size: 14px;
         border:none
     }
+    .codeArea{
+        display: block;
+        padding: 10px;
+        border-radius: 7px;
+        height: 100%;
+        color:$textColor
+    }
      &__btn{
         width: 100%;
         height: 56px;
@@ -66,12 +73,16 @@ $green:#9AFF6B;
         font-size:$bodySize;
         line-height: $bodyLine;
         margin-top: 20px;
-        background: rgba(80, 129, 251, 0.08);
+        background: $btn;
         border:0px;
         border-radius: 8px;
         
         &:hover{
-            background-color: $ligthblue;
+            background-color: $btnHover;
+        }
+        &:focus{
+            background-color: $btnFocus;
+            border: 4px solid $btnHover
         }
      }
 

@@ -25,8 +25,8 @@
             <input class="header__search_input" type="text" placeholder="Busque por algo"/>
             <button class="header__search_btn">&#128270</button>
             
-            <div class="header__search_menu">
-                <div class="header__search__menu_btn" id="#btn-dropdown"  onclick="dropdow()">&#9776</div>
+            <div class="header__search__menu">
+                <div class="header__search__menu_btn" id="btn-dropdown"  onclick="dropdow()">&#9776</div>
                 <div class="menu__container-desactived" id="menu">
                     <a class="menu__item active" href="./index.html">
                         Editor de código</a>
@@ -38,8 +38,10 @@
 
 
         <div class="header__user">
-            <img class="header__user_img" src="./Assets/img/Photo.png" alt=""/>
-            <p class="header__user_name">Herry</p>
+            <div class="user__container">
+                <img class="header__user_img" src="./Assets/img/Photo.png" alt=""/>
+                <p class="header__user_name">Herry</p>
+            </div>
         </div>
         
     </header>
@@ -70,27 +72,27 @@
 
         <section class="projects">
             <div class="project__card">
-                <div class="project__card_img">
-                    <img src="./Assets/img/screeshots/blue.png" alt="">
-                </div>
-                <div class="project__card_title">
-                    <h2 class=""> PROJETO</h2>
-                </div>
-                <div class="project__card_description">
-                    <p class="description"> descrição do projeto</p>
-                </div>
-                <div class="project__card_footer">
-                    <div class="project__card_footer-engagement">
-                        <p>💬</p>
-                        <p>9</p>
-                        <p>❤</p>
-                        <p>9</p>
+                <!-- <a href="#"> -->
+                    <div class="project__card_img">
+                        <img src="./Assets/img/screeshots/blue.png" alt="">
                     </div>
-                    <div class="project__card_footer-user">
-                        <img class="header__user_img" src="./Assets/img/Photo.png" alt=""/>
-                        <p class="header__user_name">Herry</p>
+                    <div class="project__card_title">
+                        <h2 class=""> PROJETO</h2>
                     </div>
-                </div>
+                    <div class="project__card_description">
+                        <p class="description"> descrição do projeto</p>
+                    </div>
+                    <div class="project__card_footer">
+                        <div class="project__card_footer-engagement">
+                            <p class="project__card-coments">💬 9</p>
+                            <p class="project__card-like">❤ 9</p>
+                        </div>
+                        <div class="project__card_footer-user">
+                            <img class="header__user_img" src="./Assets/img/Photo.png" alt=""/>
+                            <p class="header__user_name">Herry</p>
+                        </div>
+                    </div>
+                <!-- </a> -->
             </div>
             <div class="project__card">
                 <div class="project__card_img">
@@ -104,10 +106,8 @@
                 </div>
                 <div class="project__card_footer">
                     <div class="project__card_footer-engagement">
-                        <p>💬</p>
-                        <p>9</p>
-                        <p>❤</p>
-                        <p>9</p>
+                        <p class="project__card-coments">💬 9</p>
+                        <p class="project__card-like">❤ 9</p>
                     </div>
                     <div class="project__card_footer-user">
                         <img class="header__user_img" src="./Assets/img/Photo.png" alt=""/>
@@ -127,10 +127,8 @@
                 </div>
                 <div class="project__card_footer">
                     <div class="project__card_footer-engagement">
-                        <p>💬</p>
-                        <p>9</p>
-                        <p>❤</p>
-                        <p>9</p>
+                        <p class="project__card-coments">💬 9</p>
+                        <p class="project__card-like">❤ 9</p>
                     </div>
                     <div class="project__card_footer-user">
                         <img class="header__user_img" src="./Assets/img/Photo.png" alt=""/>
@@ -150,10 +148,8 @@
                 </div>
                 <div class="project__card_footer">
                     <div class="project__card_footer-engagement">
-                        <p>💬</p>
-                        <p>9</p>
-                        <p>❤</p>
-                        <p>9</p>
+                        <p class="project__card-coments">💬 9</p>
+                        <p class="project__card-like">❤ 9</p>
                     </div>
                     <div class="project__card_footer-user">
                         <img class="header__user_img" src="./Assets/img/Photo.png" alt=""/>

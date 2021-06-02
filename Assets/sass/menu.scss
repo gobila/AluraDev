@@ -46,7 +46,13 @@
             opacity: 1;
         }
         &:hover  > .menu__item_img{
-            background-color: $ligthblue;
+            background-color: $alterBlue;
+        }
+        &:target> .menu__item_img{
+            background-color: $blue;
+        }
+        &:focus > .menu__item_img{
+            background-color: $solarblue;
         }
     }
 }
@@ -72,6 +78,7 @@
                 border-radius: 20px;
                 margin-right: 5%;
                 background-color: $blue;
+                border: 4px solid $blue;
             }
         }
     }
@@ -80,6 +87,7 @@
 @media screen and (max-width: 768px) {
     .menu{
         display: none;
+        
         &__container{
             &-actived{
                 display: grid;

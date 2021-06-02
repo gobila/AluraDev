@@ -22,6 +22,9 @@
   border-radius: 10px;
   padding: 0 2%;
 }
+.sidebar__description_input:hover {
+  background-color: rgba(255, 255, 255, 0.24);
+}
 .sidebar__description #descript {
   height: 80px;
   font-size: inherit;
@@ -45,6 +48,9 @@
   border-radius: 10px;
   padding: 0 2%;
 }
+.sidebar__custom_changes:hover {
+  background-color: rgba(255, 255, 255, 0.24);
+}
 .sidebar__custom .sidebar__options {
   width: 100%;
 }
@@ -62,10 +68,17 @@
   border-radius: 10px;
   border: 0px;
   height: 56px;
-  color: #FFF;
+  color: #000;
 }
 .sidebar__btn:hover {
+  background-color: #7BA4FC;
+}
+.sidebar__btn:focus {
   background-color: #96B9FD;
+}
+.sidebar__btn:target {
+  background-color: #7BA4FC;
+  border: 4px solid #5081FB;
 }
 
 @media screen and (max-width: 768px) {
@@ -93,6 +106,9 @@
     border: 0px;
     border-radius: 10px;
     padding: 0 2%;
+  }
+  .sidebar__description_input:hover {
+    background-color: rgba(255, 255, 255, 0.24);
   }
   .sidebar__description #descript {
     height: 80px;
@@ -131,6 +147,9 @@
     border: 0px;
     border-radius: 10px;
     padding: 0 2%;
+  }
+  .sidebar__custom input:hover {
+    background-color: rgba(255, 255, 255, 0.24);
   }
 }
 

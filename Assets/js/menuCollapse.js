@@ -7,11 +7,12 @@ function dropdow() {
   }
   
   // Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-      console.log("hello")
+window.onclick = (event)=> {
+    // menu.classList.remove("menu__container-actived")
     if (event.target.matches('.header__search__menu_btn')) {
         var dropdowns = document.getElementsByClassName("menu");
-        dropdowns.classList.remove('menu__container-desactived')
+        dropdowns.classList.remove('.menu__container-actived')
+        console.log("hello")
     }
 }
 

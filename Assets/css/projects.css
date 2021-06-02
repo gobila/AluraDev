@@ -11,6 +11,7 @@
   background: rgba(0, 0, 0, 0.16);
   margin-bottom: 30px;
   color: #FFF;
+  border-radius: 8px;
 }
 .project__card_img {
   width: 100%;
@@ -32,6 +33,53 @@
 }
 .project__card_footer {
   display: none;
+}
+.project__card-like {
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 8px;
+}
+.project__card-like:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+.project__card-like:target {
+  background-color: rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+}
+.project__card-coments {
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 8px;
+}
+.project__card-coments:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+.project__card-coments:target {
+  background-color: rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+}
+.project__card:hover .project__card_footer {
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.project__card:hover .project__card_footer-engagement {
+  display: inherit;
+}
+.project__card:hover .project__card_footer-engagement p {
+  margin: 5px;
+}
+.project__card:hover .project__card_footer-user {
+  display: inherit;
+  margin-right: 10px;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+}
+.project__card:hover .project__card_footer-user:hover {
+  background-color: rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
 }
 
 @media screen and (max-width: 768px) {
@@ -57,6 +105,13 @@
   .project__card_footer-user {
     display: inherit;
     margin-right: 10px;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+  }
+  .project__card_footer-user:hover {
+    background-color: rgba(255, 255, 255, 0.16);
+    border-radius: 8px;
   }
 }
 

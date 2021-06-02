@@ -1,4 +1,40 @@
 @import './Variaveis.scss';
+
+
+@mixin FooterCard {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    &-engagement{
+        display: inherit;
+        p{
+            margin: 5px;
+        }
+    }
+    &-user{
+        display: inherit;
+        margin-right:10px;
+        padding: 8px;
+        justify-content: center;
+        align-items: center;
+        &:hover{
+            background-color: $backgroundColor;
+            // padding: 10px;
+            border-radius: 8px;
+        }
+    }
+}
+
+@mixin Footer-HoverTaget {
+    &:hover{
+        background-color: rgba(255,255,255,0.08);
+    }
+    &:target{
+        background-color: $backgroundColor;
+        border-radius: 8px;
+    }
+}
+
 .projects{
     display: flex;
     max-width: 80%;
@@ -12,6 +48,7 @@
         background: $backgroundColorDark;
         margin-bottom: 30px;
         color:$textColor;
+        border-radius: 8px;
         &_img{
             width: 100%;
             img{
@@ -33,6 +70,27 @@
         &_footer{
             display: none;
         }
+
+        &-like{
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 8px;
+            @include Footer-HoverTaget();
+        }
+        &-coments{
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 8px;
+            @include Footer-HoverTaget();
+            
+        }
+
+        &:hover{
+            .project__card_footer{
+                margin: 10px;
+                @include FooterCard;
+            }
+        }
     };
 }
 
@@ -47,20 +105,7 @@
             width:100%;
             
             &_footer{
-                display: flex;
-                justify-content: space-between;
-                margin-bottom: 10px;
-                
-                &-engagement{
-                    display: inherit;
-                    p{
-                        margin: 5px;
-                    }
-                }
-                &-user{
-                    display: inherit;
-                    margin-right:10px;
-                }
+                @include FooterCard()
             }
         }
     }

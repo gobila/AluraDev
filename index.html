@@ -12,13 +12,13 @@
     <link rel="stylesheet" href="Assets/css/menu.css">
     <link rel="stylesheet" href="Assets/css/code.css">
     <link rel="stylesheet" href="Assets/css/sidebar.css">
-
+    <link rel="stylesheet" href="Assets/css/modal.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css"> -->
+    <link rel="stylesheet" href="Assets/css/temas-hljs/dracula.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-
-    <script src="./Assets/js/screenshot/html2canvas.min.js"></script>
-    <script src="./Assets/js/screenshot/canvas2image.js"></script>
-<!-- <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">  -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">  -->
 </head>
+
 <body>
 
     <header class="header">
@@ -30,7 +30,7 @@
             <button class="header__search_btn">&#128270</button>
             
             <div class="header__search_menu">
-                <div class="header__search__menu_btn" id="#btn-dropdown"  onclick="dropdow()">&#9776</div>
+                <div class="header__search_menu_btn" id="#btn-dropdown"  onclick="dropdow()">&#9776</div>
                 <div class="menu__container-desactived" id="menu">
                     <a class="menu__item active" href="./index.html">
                         Editor de código</a>
@@ -42,8 +42,10 @@
 
 
         <div class="header__user">
-            <img class="header__user_img" src="./Assets/img/Photo.png" alt=""/>
-            <p class="header__user_name">Herry</p>
+            <div class="user__container">
+                <img class="header__user_img" src="./Assets/img/Photo.png" alt=""/>
+                <p class="header__user_name">Herry</p>
+            </div>
         </div>
         
     </header>
@@ -82,7 +84,10 @@
                         <div class="dot-sucess"></div>
                     </div>
                     <!-- <textarea name="code" id="codeArea" placeholder="digite o codigo"></textarea> -->
-                    <div name="code" id="codeArea" placeholder="digite o codigo" contenteditable="true"></div>
+                    <div id="codigo">
+                        <code class="codeArea hlhj" contenteditable="true" id="codeAreas" area-label="editor"></code>
+                    </div>
+                    <!-- <div name="code" id="codeArea" placeholder="digite o codigo" contenteditable="true"></div> -->
                 </div>
             </div>
             <button type="button" class="code__btn" id="code__btn">
@@ -106,8 +111,8 @@
                             <option value="HTML" class="sidebar__options_item">HTML</option>
                             <option value="CSS" class="sidebar__options_item">CSS</option>
                         </select>
-
-                        <input class="sidebar__custom_changes" type="text" placeholder="color">
+                        <button onclick="modal()" class="sidebar__custom_changes sidebar__colors_btn fundo_blue" id="sidebar__modal_btn">Color</button>
+                        <!-- <input class="sidebar__custom_changes" type="text" placeholder="color"> -->
                     </div>
                 </div>
                 
@@ -121,85 +126,35 @@
 
     <div id="output" class="noMargin"></div>
 
+    <div class="overlay-desactive" id="modalColors">
+        <div class="modal" id="">
+            <header class="modal__header">
+                <h2 class="title">Escolha a cor de fundo</h2>
+                <button class="modal__close" onclick="closeModal()">Close</button>
+            </header>
+            <div class="modal__body">
+                <div class="modal__body_container">
+                    <button id="green"class="modal__option fundo_green" onclick="green()">Green</button>
+                    <button id="blue"class="modal__option fundo_blue" onclick="blue()">Blue</button>
+                    <button id="red"class="modal__option fundo_red" onclick="red()">Red</button>
+                    <button id="yellow"class="modal__option fundo_yellow" onclick="yellow()">Yellow</button>
+                    <button id="purple"class="modal__option fundo_purple" onclick="purple()">Purple</button>
+                    <button id="white"class="modal__option fundo_white" onclick="white()">White</button>
+                    <button id="pink"class="modal__option fundo_pink" onclick="pink()">Pink</button>
+                    <button id="orange"class="modal__option fundo_orange" onclick="orange()">Orange</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 
+<script src="./Assets/js/menuCollapse.js"></script>
+<script src="./Assets/js/screenshot/html2canvas.min.js"></script>
+<script src="./Assets/js/screenshot/canvas2image.js"></script>
+<script src="./Assets/js/screenshot/screenshot.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+<script src="./Assets/js/sintaxyFormat.js"></script>
+<script src="./Assets/js/modal.js"></script>
 
-<script type="text/javascript">
-  
-//     // Define the function 
-//     // to screenshot the div
-//     function takeshot() {
-//         let div = document.getElementById('photo');
-
-//         // Use the html2canvas
-//         // function to take a screenshot
-//         // and append it
-//         // to the output div
-//         html2canvas(div).then(
-//             function (canvas) {
-//                 document
-//                 .getElementById('output')
-//                 .appendChild(canvas);
-//             })
-//     }
-// ///arrumando input de code
-//     $('#codeArea').focus();
-//     var selection = window.getSelection();
-//     var range = document.createRange();
-//     var div = $('.code__container').get(0);
-//     range.setStartBefore(div);
-//     range.collapse(true);
-//     selection.removeAllRanges(true);
-//     selection.addRange(range);
-//     // cursor should now be between div1 and div2
-//     range = window.getSelection().getRangeAt(0);
-//     console.log("range object returned is: ", range);
-    
-
-
-function takeshot(){
-    html2canvas(document.getElementById("photo"),{backgroundColor: "transparent", padding:"0px"}).then(canvas => {
-        // document.getElementById('output').appendChild(canvas)
-        return Canvas2Image.saveAsPNG(canvas);
-        console.log(canvas)
-    });
-}
-
-// document.getElementById("download").addEventListener("click", function() {
-    
-//     html2canvas(document.querySelector('#photo')).then(function(canvas) {
-
-//         saveAs(canvas.toDataURL('Assets/img'), 'file-name.png');
-//     });
-// });
-
-
-// function saveAs(uri, filename) {
-
-//     var link = document.createElement('a');
-
-//     if (typeof link.download === 'string') {
-
-//         link.href = uri;
-//         link.download = filename;
-
-//         //Firefox requires the link to be in the body
-//         document.body.appendChild(link);
-
-//         //simulate click
-//         link.click();
-
-//         //remove the link when done
-//         document.body.removeChild(link);
-
-//     } else {
-
-//         window.open(uri);
-
-//     }
-// }
-
-
-</script>
 </html>
-<script src="./Assets/js/menuCollapse.js"></script>"

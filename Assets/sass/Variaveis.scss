@@ -1,13 +1,25 @@
 // Collors
 $darkblue: #051D3B;
-$blue: #5081FB;
-$ligthblue: #7BA4FC;
-$solarblue: #96B9FD;
+$blue: #5081FB;//presed border
+$alterBlue:rgba(80, 129, 251, 0.64);
+$ligthblue: #7BA4FC;//hover
+$solarblue: #96B9FD;//focus
 $textColor: #FFF;
+//color for code
 $codeContainer: #6BD1FF;
 $danger: #FF5F56;
 $atetion: #FFBD2E;
 $sucess: #27C93F;
+$purple: #800080;
+$solarWhite: #E9E5CE;//rgba(246, 238, 200, 0.794);
+$pink: #ffc0cb;
+$orange: #ffa500;
+//btn
+$btn:rgba(80, 129, 251, 0.08);
+$btnFocus:rgba(80, 129, 251, 0.24);
+$btnHover:rgba(80, 129, 251, 0.16);
+
+//outer
 $backgroundColorDark:rgba(0, 0, 0, 0.16);
 $backgroundColor:rgba(255, 255, 255, 0.16);
 $menuCollapsed: rgba(0, 0, 0, 0.5);
