@@ -26,13 +26,34 @@
             <button class="header__search_btn">&#128270</button>
             
             <div class="header__search__menu">
-                <div class="header__search__menu_btn" id="btn-dropdown"  onclick="dropdow()">&#9776</div>
-                <div class="menu__container-desactived" id="menu">
-                    <a class="menu__item active" href="./index.html">
-                        Editor de código</a>
-                    <a class="menu__item" href="./comunity.html">
-                        Comunidade</a>
-                </div>
+                <div class="header__search__menu_btn active" id="btn-dropdown"  onclick="openMenu()">&#9776</div>
+                <div class="header__search__menu_btn desactive" id="closeMenu" onclick="closeMenu()">X</div>
+                <!-- MENU CONTAINER COM MODIFICADOR ACTIVE USANDO APENAS PARA AJUSTE 
+                    EM PRODUÇÂO O MODIFICADOR DEVE SER DESACTIVE -->
+                    <div class="menu__container-desactived" id="menu">
+                        <div class="menu__container-left">
+                            <nav class="menu__nav_header">
+                                <ul class="menu__list">
+                                    <li>
+                                        <a class="menu__item" href="./index.html">
+                                            <img class="menu__item_img" src="Assets/img/icon_code.svg" alt="">
+                                            Editor de código</img></a>
+                                    </li>
+                                    <li  class="active">
+                                        <a class="menu__item" href="./comunity.html">
+                                            <img class="menu__item_img" src="Assets/img/icon_comunity.svg" alt="">
+                                            Comunidade</img></a>
+                                    </li>
+                                    
+                                </ul>
+                            </nav>
+                            <span class="menu__item_line"></span>
+                            <div class="user__container">
+                                <img class="header__user_img" src="./Assets/img/Photo.png" alt=""/>
+                                <p class="header__user_name">Herry</p>
+                            </div>
+                        </div>
+                    </div>
             </div>
         </div>
 

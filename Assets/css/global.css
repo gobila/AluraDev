@@ -17,10 +17,16 @@ body {
   margin-bottom: 5%;
 }
 
+.desactive {
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
   .main {
+    padding-top: 20%;
     flex-direction: column;
-    width: 100%;
+    width: 90%;
+    margin: auto;
   }
 }
 
