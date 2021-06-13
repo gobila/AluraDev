@@ -105,8 +105,8 @@
                         <div class="dot-sucess"></div>
                     </div>
                     <!-- <textarea name="code" id="codeArea" placeholder="digite o codigo"></textarea> -->
-                    <div id="codigo">
-                        <code class="codeArea hlhj" contenteditable="true" id="codeAreas" area-label="editor"></code>
+                    <div id="codigo"><pre>
+                        <code class="codeArea hlhj js-code" contenteditable="true" id="codeAreas" area-label="editor"></code></pre>
                     </div>
                     <!-- <div name="code" id="codeArea" placeholder="digite o codigo" contenteditable="true"></div> -->
                 </div>
@@ -120,25 +120,28 @@
             <div class="sidebar__container">
                 <div class="sidebar__description">
                     <h3 class="title">Seu Projeto</h3>
-                    <input class="sidebar__description_input" type="text" placeholder="Nome do seu projeto"/>
-                    <textarea class="sidebar__description_input" name="description" id="descript" placeholder="Descrição do seu projeto"></textarea>
+                    <input class="sidebar__description_input  js-title" type="text" placeholder="Nome do seu projeto"/>
+                    <textarea class="sidebar__description_input js-descrition" name="description" id="descript" placeholder="Descrição do seu projeto"></textarea>
                 </div>
 
                 <div class="sidebar__custom">
                     <h3 class="title">Personalização</h3>
                     <div class="sidebar__custom_filds">
-                        <select class="sidebar__custom_changes sidebar__options" name="language" id="language" class="">
+                        <select class="sidebar__custom_changes sidebar__options js-language" name="language" id="language" class="">
                             <option value="Javascript" class="sidebar__options_item">Javascript</option>
                             <option value="HTML" class="sidebar__options_item">HTML</option>
                             <option value="CSS" class="sidebar__options_item">CSS</option>
                         </select>
-                        <button onclick="modal()" class="sidebar__custom_changes sidebar__colors_btn fundo_blue" id="sidebar__modal_btn">Color</button>
+                        <button onclick="modal()" class="sidebar__custom_changes sidebar__colors_btn fundo_blue js-color" id="sidebar__modal_btn" value="fundo_blue">Color</button>
                         <!-- <input class="sidebar__custom_changes" type="text" placeholder="color"> -->
                     </div>
                 </div>
                 
-                <button class="sidebar__btn" id="download" onclick="takeshot()">
+                <button class="sidebar__btn js-btn-savar" id="">
                     Salvar projeto
+                </button>
+                <button class="sidebar__btn" id="download" onclick="takeshot()">
+                    Exportar png
                 </button>
             </div>
         </section>
@@ -155,14 +158,14 @@
             </header>
             <div class="modal__body">
                 <div class="modal__body_container">
-                    <button id="green"class="modal__option fundo_green" onclick="green()">Green</button>
-                    <button id="blue"class="modal__option fundo_blue" onclick="blue()">Blue</button>
-                    <button id="red"class="modal__option fundo_red" onclick="red()">Red</button>
-                    <button id="yellow"class="modal__option fundo_yellow" onclick="yellow()">Yellow</button>
-                    <button id="purple"class="modal__option fundo_purple" onclick="purple()">Purple</button>
-                    <button id="white"class="modal__option fundo_white" onclick="white()">White</button>
-                    <button id="pink"class="modal__option fundo_pink" onclick="pink()">Pink</button>
-                    <button id="orange"class="modal__option fundo_orange" onclick="orange()">Orange</button>
+                    <button id="green"class="modal__option fundo_green" onclick="green()" value="green">Green</button>
+                    <button id="blue"class="modal__option fundo_blue" onclick="blue()" value="blue">Blue</button>
+                    <button id="red"class="modal__option fundo_red" onclick="red()" value="red">Red</button>
+                    <button id="yellow"class="modal__option fundo_yellow" onclick="yellow()" value="yellow">Yellow</button>
+                    <button id="purple"class="modal__option fundo_purple" onclick="purple()" value="purple">Purple</button>
+                    <button id="white"class="modal__option fundo_white" onclick="white()" value="white">White</button>
+                    <button id="pink"class="modal__option fundo_pink" onclick="pink()" value="pink">Pink</button>
+                    <button id="orange"class="modal__option fundo_orange" onclick="orange()" value="orange">Orange</button>
                 </div>
             </div>
         </div>
@@ -177,5 +180,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
 <script src="./Assets/js/sintaxyFormat.js"></script>
 <script src="./Assets/js/modal.js"></script>
-
+<script src="./Assets/js/save.js"></script>
 </html>

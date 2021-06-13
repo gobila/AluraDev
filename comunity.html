@@ -7,11 +7,13 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="Assets/css/reset.css">
+    <link rel="stylesheet" href="Assets/css/modal.css">
     <link rel="stylesheet" href="Assets/css/global.css">
     <link rel="stylesheet" href="Assets/css/header.css">
     <link rel="stylesheet" href="Assets/css/menu.css">
     <link rel="stylesheet" href="Assets/css/code.css">
     <link rel="stylesheet" href="Assets/css/projects.css">
+    <link rel="stylesheet" href="Assets/css/temas-hljs/dracula.css">
 
 
 
@@ -91,10 +93,9 @@
             </div>            
         </section>
 
-        <section class="projects">
-            <div class="project__card">
-                <!-- <a href="#"> -->
-                    <div class="project__card_img">
+        <section class="projects js-projects">
+            <!-- <div class="project__card  js-projects"> -->
+                    <!-- <div class="project__card_img">
                         <img src="./Assets/img/screeshots/blue.png" alt="">
                     </div>
                     <div class="project__card_title">
@@ -112,72 +113,9 @@
                             <img class="header__user_img" src="./Assets/img/Photo.png" alt=""/>
                             <p class="header__user_name">Herry</p>
                         </div>
-                    </div>
-                <!-- </a> -->
-            </div>
-            <div class="project__card">
-                <div class="project__card_img">
-                    <img src="./Assets/img/screeshots/yellow.png" alt="">
-                </div>
-                <div class="project__card_title">
-                    <h2 class=""> PROJETO</h2>
-                </div>
-                <div class="project__card_description">
-                    <p class="description"> descrição do projeto</p>
-                </div>
-                <div class="project__card_footer">
-                    <div class="project__card_footer-engagement">
-                        <p class="project__card-coments">💬 9</p>
-                        <p class="project__card-like">❤ 9</p>
-                    </div>
-                    <div class="project__card_footer-user">
-                        <img class="header__user_img" src="./Assets/img/Photo.png" alt=""/>
-                        <p class="header__user_name">Herry</p>
-                    </div>
-                </div>
-            </div>
-            <div class="project__card">
-                <div class="project__card_img">
-                    <img src="./Assets/img/screeshots/pink.png" alt="">
-                </div>
-                <div class="project__card_title">
-                    <h2 class=""> PROJETO</h2>
-                </div>
-                <div class="project__card_description">
-                    <p class="description"> descrição do projeto</p>
-                </div>
-                <div class="project__card_footer">
-                    <div class="project__card_footer-engagement">
-                        <p class="project__card-coments">💬 9</p>
-                        <p class="project__card-like">❤ 9</p>
-                    </div>
-                    <div class="project__card_footer-user">
-                        <img class="header__user_img" src="./Assets/img/Photo.png" alt=""/>
-                        <p class="header__user_name">Herry</p>
-                    </div>
-                </div>
-            </div>
-            <div class="project__card">
-                <div class="project__card_img">
-                    <img src="./Assets/img/screeshots/green.png" alt="">
-                </div>
-                <div class="project__card_title">
-                    <h2 class=""> PROJETO</h2>
-                </div>
-                <div class="project__card_description">
-                    <p class="description"> descrição do projeto</p>
-                </div>
-                <div class="project__card_footer">
-                    <div class="project__card_footer-engagement">
-                        <p class="project__card-coments">💬 9</p>
-                        <p class="project__card-like">❤ 9</p>
-                    </div>
-                    <div class="project__card_footer-user">
-                        <img class="header__user_img" src="./Assets/img/Photo.png" alt=""/>
-                        <p class="header__user_name">Herry</p>
-                    </div>
-                </div>
-            </div>
+                    </div> -->
+            <!-- </div> -->
+            
         </section>
 
 
@@ -185,4 +123,12 @@
     
 </body>
 <script src="./Assets/js/menuCollapse.js"></script>
+<script src="./Assets/js/read.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+<script>
+    const todosOsCodigos = document.querySelectorAll('code')
+    todosOsCodigos.forEach(codigo => {
+        hljs.highlightBlock(codigo)
+    })
+</script>
 </html>

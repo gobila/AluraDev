@@ -37,7 +37,7 @@
 
 .projects{
     display: flex;
-    max-width: 80%;
+    width: 80%;
     flex-wrap: wrap;
     justify-content: space-between;
     margin:20px;
@@ -55,6 +55,17 @@
                 width: 100%;
             };
         };
+        &__codigo{
+            max-width: 100%;
+            padding: 3%;
+            // background-color: $backgroundColorDark;
+            border-radius: 8px;
+            line-height: 24px;
+
+            .hljs{
+                display: block;
+            }
+        }
         &_title{
             font-size: $bodySize;
             font-weight: 700;
