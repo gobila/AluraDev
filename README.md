@@ -8,6 +8,7 @@
 <img src="https://cdn.discordapp.com/attachments/855176056189091841/855211506542051358/Badge_-_Primeiro.png" alt="Badge_1º_Alura_Challenge" width="150px">
 <!-- Badge Local -->
 <!-- ![Badge_1º_Alura_Challenge](./ReadmeAssets/Badge_-_Primeiro.png) -->
+<img src="./ReadmeAssets/Badge_reduzido-Helper.png" alt="Badge_1º_Alura_Challenge" width="150px">
 
 ![GitHub](https://img.shields.io/github/license/gobila/AluraDev?style=flat-square)
 ![Website](https://img.shields.io/website?down_message=Offline&style=flat-square&up_message=Online&url=https%3A%2F%2Falura-dev-lake.vercel.app%2F)
