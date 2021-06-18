@@ -11,8 +11,8 @@
 
 ![GitHub](https://img.shields.io/github/license/gobila/AluraDev?style=flat-square)
 ![Website](https://img.shields.io/website?down_message=Offline&style=flat-square&up_message=Online&url=https%3A%2F%2Falura-dev-lake.vercel.app%2F)
-![Twitter URL](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2Fmoisesgobila)
-
+[![Twitter Follow](https://img.shields.io/twitter/follow/moisesgobila?style=social)](https://twitter.com/intent/follow?screen_name=moisesgobila)
+<!-- [![Twitter URL](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2Fmoisesgobila)](https://twitter.com/moisesgobila/intent/tweet?text=Wow:&url=https%3A%2F%2Ftwitter.com%2Fmoisesgobila) -->
 </div>
 
 # AluraDev
