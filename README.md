@@ -1,20 +1,11 @@
-<!-- <style>
-img[alt=Badge_1º_Alura_Challenge] {
-  width: 100px;
-  border: none;
-  background: none;
-  align-items: center;
-  text-align: center;
-}
-</style> -->
 <!-- Chamando estilização do Readme -->
 <link rel="stylesheet" href="./ReadmeAssets/readme.css">
 <!-- Div apenas para centralizar o badge -->
-<div class=center>
+<div class=center align="center">
 <!-- badge na nuvem -->
-
-![Badge_1º_Alura_Challenge](https://cdn.discordapp.com/attachments/855176056189091841/855211506542051358/Badge_-_Primeiro.png)
-
+  
+<!-- ![Badge_1º_Alura_Challenge](https://cdn.discordapp.com/attachments/855176056189091841/855211506542051358/Badge_-_Primeiro.png) -->
+<img src="https://cdn.discordapp.com/attachments/855176056189091841/855211506542051358/Badge_-_Primeiro.png" alt="Badge_1º_Alura_Challenge" width="150px">
 <!-- Badge Local -->
 <!-- ![Badge_1º_Alura_Challenge](./ReadmeAssets/Badge_-_Primeiro.png) -->
 
