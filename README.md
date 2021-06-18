@@ -1,5 +1,33 @@
+<!-- <style>
+img[alt=Badge_1º_Alura_Challenge] {
+  width: 100px;
+  border: none;
+  background: none;
+  align-items: center;
+  text-align: center;
+}
+</style> -->
+<!-- Chamando estilização do Readme -->
+<link rel="stylesheet" href="./ReadmeAssets/readme.css">
+<!-- Div apenas para centralizar o badge -->
+<div class=center>
+<!-- badge na nuvem -->
+
+![Badge_1º_Alura_Challenge](https://cdn.discordapp.com/attachments/855176056189091841/855211506542051358/Badge_-_Primeiro.png)
+
+<!-- Badge Local -->
+<!-- ![Badge_1º_Alura_Challenge](./ReadmeAssets/Badge_-_Primeiro.png) -->
+
+![GitHub](https://img.shields.io/github/license/gobila/AluraDev?style=flat-square)
+![Website](https://img.shields.io/website?down_message=Offline&style=flat-square&up_message=Online&url=https%3A%2F%2Falura-dev-lake.vercel.app%2F)
+![Twitter URL](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2Fmoisesgobila)
+
+</div>
+
 # AluraDev
 Desafio proposto pela Alura para a criação de uma ferramenta de compartilhamento de codigo, semelhante ao https://carbon.now.sh/ com o adicional de uma pagina de comunidade, onde usarios possam vê o codigo de outras pessoas.
+
+[LINK DEMO](https://alura-dev-lake.vercel.app/)
 
 ## Tecnologia usadas
 Para fazer o screenshot foi usada a biblioteca Html2Canvas, você pode revisar o arquivo screenshot.js para escolher a div para gerar a imagem.<br><br>
@@ -12,8 +40,8 @@ O padrão CSS utilizado nesse projeto se basea no BEM. Veja abaixo:
 ````
 .Bloco__Elemento_Subelemento-modificador
 ````
-## O que ainda falta?
+## Sujestão para uma proxima versão?
 
-1. Criar a persitencia dos códigos para salvar os codigos e disponibilizar na área de comunidade;
-2. Hospedar o projeto;
-3. Criar/refatorar para uma versão SPA
+1. Criar/refatorar para uma versão SPA;
+2. Criar seleção de temas darkmode e lightmode;
+3. Pagina de Usuario
